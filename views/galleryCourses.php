@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Midas</title>
     <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v4.0">
-    <link rel="stylesheet" href="../assets/css/galleryCoursesStyles.css?v10.0">
+    <link rel="stylesheet" href="../assets/css/galleryCoursesStyles.css?v12.0">
     <script src="https://kit.fontawesome.com/7663d03649.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -151,27 +151,8 @@
         </div>
     </section>
 
-    <div class="popUpContainer">
-        <div class="card">
-            <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
-            <h3>NOMBRE DEL CURSO artes</h3>
-            <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
-            Provident, delectus labore sapiente vero fugiat enim officia itaque aspernatur praesentium
-            qui veritatis odio, exercitationem consequuntur ex quo tempora iste. Inventore, laborum?
-            </p>
-            <div class="iconsCardFooter">  
-                    <a href="#">
-                        <img src="../assets/images/icons/notification_icon.png" alt="icono de suscribirse">
-                        <span><b>SUSCRIBIRSE</b></span>
-                    </a>
-                    <a href="#">
-                        <img src="../assets/images/icons/eye_icon.png" alt="icono de ver detalles">
-                        <span><b>VER DETALLES</b></span>
-                    </a>
-            </div>
-        </div>
-    </div>
+    <div id="popUpRoot"></div>
 
-    <script src="../assets/js/loadCardsCategory.js?v1.0"></script>
+    <script src="../assets/js/loadCardsCategory.js?v3.0"></script>
 </body>
 </html>
