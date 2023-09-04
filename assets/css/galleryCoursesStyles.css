@@ -44,6 +44,8 @@ body{
     left: 0;
     width: 40vw;
     height: 100vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .categoryMenu .logoCategoryMenu{
@@ -168,9 +170,9 @@ body{
 #searchBarTop{
     all: unset;
     width: 65%;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid rgb(41, 41, 41);
+    border-left: 1px solid rgb(41, 41, 41);
+    border-right: 1px solid rgb(41, 41, 41);
     padding: 3px;
     padding-left: 30px;
 }
@@ -335,3 +337,8 @@ body{
 
 }
 
+@media screen and (min-width: 1440px) {
+    .headerGallerCourses .textHeader{
+        width: 500px;
+    }
+}

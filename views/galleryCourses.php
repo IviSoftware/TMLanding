@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Midas</title>
     <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v4.0">
-    <link rel="stylesheet" href="../assets/css/galleryCoursesStyles.css?v9.0">
+    <link rel="stylesheet" href="../assets/css/galleryCoursesStyles.css?v10.0">
     <script src="https://kit.fontawesome.com/7663d03649.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,7 @@
                 <input type="text" id="searchBarTop">
             </div>
         </div>
-        <div>
+        <div class="textHeader">
             <p class="descriptionHeader">
                 <b>Breve descripción.</b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 Modi natus doloremque ea repudiandae voluptatum ex est dolor, quas temporibus impedit delectus 
@@ -57,7 +57,7 @@
 
     <section class="coursesContentCards"  id="tecnologySection">
         <?php for($i = 0;$i <= 10;$i++): ?>
-            <div class="card">
+            <div class="card" id="tecCard-<?= $i ?>">
             <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
             <h3>NOMBRE DEL CURSO Tec</h3>
             <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
@@ -81,7 +81,7 @@
 
     <section class="coursesContentCards noActive"  id="bussinesSection">
         <?php for($i = 0;$i <= 10;$i++): ?>
-            <div class="card">
+            <div class="card" id="bussinesCard-<?= $i ?>">
             <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
             <h3>NOMBRE DEL CURSO negocio</h3>
             <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
@@ -105,7 +105,7 @@
 
     <section class="coursesContentCards noActive"  id="artsSection">
         <?php for($i = 0;$i <= 10;$i++): ?>
-            <div class="card">
+            <div class="card" id="artsCard-<?= $i ?>">
             <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
             <h3>NOMBRE DEL CURSO artes</h3>
             <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
@@ -129,7 +129,7 @@
 
     <section class="coursesContentCards noActive"  id="scienceSection">
         <?php for($i = 0;$i <= 10;$i++): ?>
-            <div class="card">
+            <div class="card" id="scienceCard -<?= $i ?>">
             <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
             <h3>NOMBRE DEL CURSO ciencias</h3>
             <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
@@ -150,6 +150,27 @@
         <?php endfor; ?>
         </div>
     </section>
+
+    <div class="popUpContainer">
+        <div class="card">
+            <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
+            <h3>NOMBRE DEL CURSO artes</h3>
+            <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
+            Provident, delectus labore sapiente vero fugiat enim officia itaque aspernatur praesentium
+            qui veritatis odio, exercitationem consequuntur ex quo tempora iste. Inventore, laborum?
+            </p>
+            <div class="iconsCardFooter">  
+                    <a href="#">
+                        <img src="../assets/images/icons/notification_icon.png" alt="icono de suscribirse">
+                        <span><b>SUSCRIBIRSE</b></span>
+                    </a>
+                    <a href="#">
+                        <img src="../assets/images/icons/eye_icon.png" alt="icono de ver detalles">
+                        <span><b>VER DETALLES</b></span>
+                    </a>
+            </div>
+        </div>
+    </div>
 
     <script src="../assets/js/loadCardsCategory.js?v1.0"></script>
 </body>
