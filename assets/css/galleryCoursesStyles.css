@@ -105,6 +105,11 @@ body{
     justify-content: center;
     align-items: center;
     row-gap: 30px;
+    
+}
+
+.coursesContentCards.noActive{
+    display: none;
 }
 
 .card .courseImg{
