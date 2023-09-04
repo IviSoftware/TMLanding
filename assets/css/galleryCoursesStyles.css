@@ -2,17 +2,12 @@
     --asideCategoriesColor:#29172B;
 }
 
-html,body{
-    margin:0;
-    padding: 0;
-    min-height: 100%;
-}
-
-*{
-    box-sizing: border-box;
-}
-
 body{
+    background-image: url('../images/background-courses.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 100%;
     display: grid;
     grid-template-columns: 40vw 60vw;
     grid-template-rows: 550px 1fr;
@@ -20,23 +15,35 @@ body{
     "aside header"
     "aside content"
     ;
+    position: relative;
 }
 
-.categoryMenu{
-    grid-area: aside;
+.searchBarContainer.desktopSearchBar{
+    display:none;
+}
+
+.categoriesBtnMenu{
+    user-select: none;
 }
 
 .headerGallerCourses{
     grid-area: header;
+    background-color: bisque;
 }
+
 
 .coursesContentCards{
     grid-area: content;
+    padding-top: 30px;
 }
 
 .categoryMenu{
+    grid-area: aside;
     background-color: var(--asideCategoriesColor) ;
-    
+    position: fixed;
+    left: 0;
+    width: 40vw;
+    height: 100vh;
 }
 
 .categoryMenu .logoCategoryMenu{
@@ -82,6 +89,7 @@ body{
 .headerGallerCourses h1{
     font-weight: 800;
     color: #23211D;
+    font-size: 29px;
 }
 
 .headerGallerCourses{
@@ -109,7 +117,7 @@ body{
     border-radius: 10px;
     background-color: #261B25;
     width: 90%;
-    max-width: 500px;
+    max-width: 320px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -168,3 +176,157 @@ body{
     top: 3px;
     font-size: 20px;
 }
+
+@media screen and (min-width: 320px) {
+    .headerGallerCourses h1{
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 365px) {
+    body{
+        grid-template-rows: 440px 1fr;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    body{
+        grid-template-rows: 450px 1fr;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    body{
+        grid-template-rows: 420px 1fr;
+    }
+}
+
+@media screen and (min-width: 562px) {
+    body{
+        grid-template-rows: 340px 1fr;
+    }
+}
+
+@media screen and (min-width: 680px){
+    body{
+        grid-template-rows:300px 1fr;
+    }
+}
+
+@media screen and (min-width: 809px){
+    body{
+        grid-template-rows:250px 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-columns:20% 80%; 
+        grid-template-rows:200px 1fr;
+        grid-template-areas: 
+        "header header"
+        "aside content"
+        ;
+    }
+    .searchBarContainer{
+        display:none;
+    }
+
+    .searchBarContainer.desktopSearchBar{
+        display:block;
+    }
+
+    .headerGallerCourses{
+        padding: 0 50px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerGallerCourses h1{
+        display: block;
+        font-size: 35px;
+        width: 400px;
+    }
+
+    .headerGallerCourses span{
+        display: block;
+    }
+
+    .categoryMenu{
+        margin-top: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-self: end;
+        align-self: start;
+        width: 190px;
+        border-radius: 10px;
+    }
+
+    .coursesContentCards{
+        align-self: self-start;
+    }
+
+    .categoryMenu .logoCategoryMenu{
+        display: none;
+    }
+
+    .categoriesTitle{
+        font-size: 20px;
+    }
+
+    .categoriesBtnMenu{
+        font-size: 15px;
+        cursor: pointer;
+        padding: 4px;
+        border-bottom: 1px solid transparent;
+        border-radius: 5px;
+    }
+
+    .categoriesBtnMenu:hover{
+        border-bottom: 1px solid #ECEBE6;
+    }
+
+    .coursesContentCards{
+        flex-direction: row;
+        flex-wrap:wrap;
+        column-gap:25px;
+    }
+    
+    .categoryMenu{
+        position: unset;
+    }
+
+    .iconsCardFooter{
+        width: 100%;
+        justify-content: flex-end;
+        column-gap:20px;
+        padding-bottom: 5px;
+        padding-right: 20px;
+    }
+
+    .card h3 {
+        text-align: start;
+        width: 100%;
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    .descriptionHeader{
+        position: relative;
+    }
+
+    .descriptionHeader::before{
+        content: '';
+        display:block;
+        width: 15px;
+        height: 100px;
+        background-color: #23211D;
+        position: absolute;
+        left: -30px;
+        top:-15px;
+    }
+
+}
+

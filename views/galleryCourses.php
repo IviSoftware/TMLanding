@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Midas</title>
-    <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v1.0">
-    <link rel="stylesheet" href="../assets/css/galleryCoursesStyles.css?v2.0">
+    <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v4.0">
+    <link rel="stylesheet" href="../assets/css/galleryCoursesStyles.css?v8.0">
     <script src="https://kit.fontawesome.com/7663d03649.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
         <img src="../assets/images/logo_TM.png" alt="Logo de training midas" class="logoCategoryMenu">
         <nav class="categoriesNavbar">
             <ul>
-                <li><b>CATEGORIAS</b></li>
-                <li>TECNOLOGÍA</li>
-                <li>NEGOCIOS</li>
-                <li>ARTES</li>
-                <li>CIENCIAS</li>
+                <li class="categoriesTitle"><b>CATEGORIAS</b></li>
+                <li class="categoriesBtnMenu">TECNOLOGÍA</li>
+                <li class="categoriesBtnMenu">NEGOCIOS</li>
+                <li class="categoriesBtnMenu">ARTES</li>
+                <li class="categoriesBtnMenu">CIENCIAS</li>
             </ul>
         </nav>
 
@@ -35,19 +35,29 @@
     </aside>
 
     <header class="headerGallerCourses">
-        <h1>EXPLORA NUESTROS CURSOS</h1>
-        <p><b>Breve descripción.</b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Modi natus doloremque ea repudiandae voluptatum ex est dolor, quas temporibus impedit delectus 
-            tenetur fuga et laudantium, quos tempore. Similique, repellat et?
-        </p>
-        <div class="searchBarContainer">
-            <i class="fa-solid fa-magnifying-glass" style="color: #0e0e09;" id="searchBarIcon"></i>
-            <input type="text" id="searchBarTop">
+        <div>
+            <h1><span>EXPLORA</span> NUESTROS CURSOS</h1>
+            <div class="searchBarContainer desktopSearchBar">
+                <i class="fa-solid fa-magnifying-glass" style="color: #0e0e09;" id="searchBarIcon"></i>
+                <input type="text" id="searchBarTop">
+            </div>
+        </div>
+        <div>
+            <p class="descriptionHeader">
+                <b>Breve descripción.</b>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                Modi natus doloremque ea repudiandae voluptatum ex est dolor, quas temporibus impedit delectus 
+                tenetur fuga et laudantium, quos tempore. Similique, repellat et?
+            </p>
+            <div class="searchBarContainer">
+                <i class="fa-solid fa-magnifying-glass" style="color: #0e0e09;" id="searchBarIcon"></i>
+                <input type="text" id="searchBarTop">
+            </div>
         </div>
     </header>
 
     <section class="coursesContentCards">
-        <div class="card">
+        <?php for($i = 0;$i <= 10;$i++): ?>
+            <div class="card">
             <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
             <h3>NOMBRE DEL CURSO</h3>
             <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
@@ -65,6 +75,7 @@
                     </a>
             </div>
         </div>
+        <?php endfor; ?>
     </section>
 </body>
 
