@@ -14,6 +14,7 @@ const popUpRoot = document.getElementById('popUpRoot');
 
 //Función para clonar cards
 const clonarCard = (id) => {
+    console.log('id',id);
     const cardOriginal = document.getElementById(id);
     return cardOriginal.cloneNode(true);
 };
@@ -25,13 +26,14 @@ const renderPopUp = (card) => {
 }
 
 //Función para añadir escuchador a las cards
-const listenerToCards = (nameOfSection)=>{
-    const botonesVerDetalles = document.querySelectorAll('.iconsCardFooter a:nth-child(2)');
+const listenerToCards = (nameOfSection,idSection)=>{
+    const botonesVerDetalles = document.querySelectorAll(`#${idSection} .iconsCardFooter a:nth-child(2)`);
     botonesVerDetalles.forEach((boton, index)=> {
         boton.addEventListener('click', (event)=> {
             event.preventDefault();
             const cardClone = clonarCard(`${nameOfSection}-${index}`);
-            cardClone.style.transform = 'scale(1.2)'
+            
+            cardClone.style.transform = 'scale(1.2)';
             renderPopUp(cardClone)
         });
     });
@@ -41,6 +43,7 @@ const listenerToCards = (nameOfSection)=>{
 const handleCategoryClick = (sectionId) => {
     allCategories.forEach((category) => {
         category.classList.add('noActive');
+        
     });
     document.getElementById(sectionId).classList.remove('noActive');
 }
@@ -52,11 +55,27 @@ const categoryBtns = {
     science: document.getElementById('scienceCategoryBtn'),
 };
 
-for (const key in categoryBtns) {
-    categoryBtns[key].addEventListener('click', () => handleCategoryClick(`${key}Section`));
+const changeListener = {
+    tecnology: ()=>listenerToCards('tecCard'),
+    bussines: ()=>listenerToCards('bussinesCard'),
+    arts:()=>listenerToCards('artsCard') ,
+    science:()=>listenerToCards('scienceCard'),
 }
 
-listenerToCards('tecCard');
+
+for (const key in categoryBtns) {
+    categoryBtns[key].addEventListener('click', () => {
+        
+        handleCategoryClick(`${key}Section`);
+        console.log('cambio');
+
+    });
+}
+
+listenerToCards('tecCard','tecnologySection');
+listenerToCards('bussinesCard','bussinesSection');
+listenerToCards('artsCard','artsSection');
+listenerToCards('scienceCard','scienceSection');
 
 popUpRoot.addEventListener('click',()=>{
     popUpRoot.style.display = 'none';

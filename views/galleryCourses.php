@@ -129,7 +129,7 @@
 
     <section class="coursesContentCards noActive"  id="scienceSection">
         <?php for($i = 0;$i <= 10;$i++): ?>
-            <div class="card" id="scienceCard -<?= $i ?>">
+            <div class="card" id="scienceCard-<?= $i ?>">
             <img class="courseImg" src="../assets/images/sampleVideoCourse.png" alt="imagen del curso">
             <h3>NOMBRE DEL CURSO ciencias</h3>
             <p class="descriptionCard"><b>Breve Descripción.</b> Lorem,ipsum dolor sit amet consectetur adipisicing elit. 
@@ -153,6 +153,6 @@
 
     <div id="popUpRoot"></div>
 
-    <script src="../assets/js/loadCardsCategory.js?v3.0"></script>
+    <script src="../assets/js/loadCardsCategory.js?v5.0"></script>
 </body>
 </html>
