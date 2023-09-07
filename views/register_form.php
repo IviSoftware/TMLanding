@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Midas</title>
-    <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v5.0">
+    <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v6.0">
     <link rel="stylesheet" href="../assets/css/registerStyles.css?v3.0">
     <script src="https://kit.fontawesome.com/7663d03649.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,9 @@
         <img class="logoRegister" src="../assets/images/logo_academy_training.png" alt="logo academy training midas">
     </header>
 
-    <section class="loginSection">
+    <div class="borderDesktop"></div>
+
+    <section class="loginSection" style="z-index:200;">
 
         <form action="#" id="formRegister">
             <input class="inputForm" type="text" name="firstName" id="firstName" placeholder="NOMBRE">
@@ -46,8 +48,8 @@
 
             <input type="submit" class="btnRegister" value="REGISTRARTE">
         </form>
-
-        
     </section>
+
+    
 </body>
 </html>

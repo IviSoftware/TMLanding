@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Midas</title>
-    <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v5.0">
+    <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v6.0">
     <link rel="stylesheet" href="../assets/css/registerStyles.css?v3.0">
     <script src="https://kit.fontawesome.com/7663d03649.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +42,14 @@
             margin:0 auto;
             margin-top:30px;
         }
+
+      @media screen and (min-width:1024px) {
+        .alertConditions,
+        .conditionsSee{
+            padding-top:90px;
+            padding-bottom:90px;
+        }
+      }  
     </style>
 
 </head>
@@ -57,7 +65,10 @@
     <section class="loginSection">
         <div class="alertConditions">
             <p>
-                HE LEÍDO Y ESTOY DE ACUERDO CON LOS <span style="color:#DABE6C" id="seeTerms">TÉRMINOS Y CONDICIONES </span>
+                HE LEÍDO Y ESTOY DE ACUERDO CON LOS 
+                <span style="color:#DABE6C;text-decoration:underline;" id="seeTerms">
+                    <b>TÉRMINOS Y CONDICIONES</b>
+                </span>
                 DE TRAINING MIDAS.
             </p>
             <button class="acceptBtn">ACEPTAR</button>
