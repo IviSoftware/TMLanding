@@ -12,3 +12,9 @@ html,body{
 body{
     height: 100vh;
 }
+
+@media screen and (min-width: 1024px) {
+    .menuMobile{
+        display: none;
+    }
+}
