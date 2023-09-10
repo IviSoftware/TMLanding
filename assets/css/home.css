@@ -1,0 +1,385 @@
+body{
+
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 430px 1fr;
+    grid-template-areas: 
+    "aside header"
+    "aside content"
+    ;
+    position: relative;
+}
+
+.menuMobile{
+    grid-area: aside;
+    background-color: #29172B;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 30vw;
+    height: 100vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+ 
+}
+
+header{
+    width: 100%;
+    grid-area: header;
+    background-image: url('../images/background_headerHome.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: start;
+    padding: 10px;
+}
+
+header h1{
+    font-size: 20px;
+}
+
+.contentSection{
+    grid-area: content;
+    background-color: #221E23;
+    color:white;
+}
+
+
+.ourCoursesBtn{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 5px;
+}
+
+.headerSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.headerSection h2{
+    font-size: 14px;
+}
+
+.searchBar{
+    all:unset;
+    width: 140px;
+    background-color: transparent;
+    border-bottom: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+}
+
+.titleSection{
+    font-size: 14px;
+}
+
+
+.seeMoreCoursesBtn{
+    color:white;
+    text-decoration: none;
+}
+
+.cardsContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card .courseImg{
+    width: 90%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card{
+    border-radius: 10px;
+    background-color: #261B25;
+    width: 90%;
+    max-width: 320px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    padding-bottom: 15px;
+    border: 2px solid black;
+}
+
+.card h3{
+    font-size: 12px;
+}
+
+.card .descriptionCard{
+    padding: 6px;
+    font-size: 10px;
+}
+
+.iconsCardFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.iconsCardFooter a>img{
+    width: 12px;
+}
+
+.iconsCardFooter a{
+    font-size: 9px;
+    text-decoration: none;
+}
+
+.iconsCardFooter a span{
+    color: white;
+}
+
+.cardCategory{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.textCard{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cardCategory:nth-child(1){
+    background-image: url('../images/bruce-mars-8YG31Xn4dSw-unsplash.jpg');
+}
+
+.cardCategory:nth-child(2){
+    background-image: url('../images/wilmer-martinez-Lme2Ye2jVo8-unsplash.jpg');
+}
+
+.cardCategory:nth-child(3){
+    background-image: url('../images/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg');
+}
+
+.cardCategory:nth-child(4){
+    background-image: url('../images/louis-reed-pwcKF7L4-no-unsplash.jpg');
+}
+
+.categories{
+    background-color: #28292E;
+    padding-top: 7px;
+    padding-bottom: 20px;
+}
+
+.featuredCourses{
+    padding-bottom: 20px;
+}
+
+.cardTeacher{
+    width: 180px;
+    height: auto;
+    background-color: #E9CB73;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.teachers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.testimony{
+    width: 100%;
+    height: auto;
+    background-image: url('../images/testimonios_img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 4px;
+    margin-bottom: 30px;
+}
+
+.testimony h4,
+.testimony h5,
+.testimony p{
+    text-shadow:1px 2px 5px  #221E23;
+}
+
+#searchBarIcon{
+    display: none;
+}
+
+.cardTeacher img{
+    width: 100%;
+}
+
+.cardTeacher h4{
+    position: absolute;
+    top: 100px;
+    font-size: 16px;
+    text-shadow: 0 1px 5px black;
+    left: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    .headerSection{
+        padding-top: 20px;
+        column-gap: 20px;
+    }
+
+    .searchBar{
+        width: 240px;
+        font-size: 16px;
+        padding: 8px;
+        padding-left: 33px;
+        text-align: start;
+    }
+
+    .searchBarContainer{
+        position: relative;
+    }
+
+    .headerSection h2{
+        font-size: 23px;
+    }
+
+    #searchBarIcon{
+        display: block;
+        color: white;
+        position: absolute;
+        font-size: 24px;
+        left: 5px;
+        top: 5px;
+    }
+
+    body{
+        grid-template-columns: 20vw 80vw;
+    }
+
+    .menuMobile{
+        width: 20vw;
+    }
+
+    .teachers{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "content"
+        ;
+    }
+
+    .searchBar{
+        width: 400px;
+    }
+    
+    .cardCategory{
+        width: 230px;
+        height: 230px;
+    }
+
+    .categories h3,
+    .headerSection h2,
+    .titleSection{
+        font-size: 35px;
+    }
+    
+    .seeMoreCoursesBtn{
+        font-size: 23px;
+    }
+
+    .testimony{
+        height: 420px;
+    }
+
+    header{
+      align-items: start;
+      row-gap: 0;
+      position: relative;
+    }
+
+    .testimony{
+        position: relative;
+    }
+
+    header p,
+    .ourCoursesBtn{
+        width: 400px;
+    }
+
+    header h1{
+        width: 700px;
+        font-weight: 800;
+        margin-bottom: 0;
+    }
+
+    .testimony h4,
+    header h1{
+        font-size: 55px;
+    }
+
+
+    .footerTestimony,
+    .testimony h4{
+        position: absolute;
+    }
+
+    .testimony h4{
+        top:  0px;
+        left: 20px;
+    }
+
+    .footerTestimony{
+        bottom: 20px;
+        right: 20px;
+        width: 400px;
+        text-align: end;
+    }
+
+    .footerTestimony h5{
+        font-size: 20px;
+    }
+}

@@ -48,6 +48,16 @@ header h1{
     filter: drop-shadow(-2px 2px 15px #E9CB73);
 }
 
+.loginMainBtn{
+    all:unset;
+    width: 240px;
+    background-color: rgba(40, 32, 43,0.8);
+    color:#E9CB73;
+    padding: 8px;
+    margin-bottom: 15px;
+    cursor:pointer;
+}
+
 .loginSection{
     grid-area: contentPage;
 }
@@ -135,7 +145,7 @@ header h1{
     display: none;
     border: 1px solid white;
     background-color: transparent;
-    width: 92vw;
+    width: 98vw;
     height: 80vh;
     position: absolute;
     top:0;
