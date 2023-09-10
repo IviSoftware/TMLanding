@@ -51,10 +51,10 @@
         }
       }  
     </style>
-
+    <link rel="stylesheet" href="../assets/css/menuDesktopStyles.css?v1.0">
 </head>
 <body>
-    
+    <?php require '../layouts/navBar.php'  ?>
     <?php require '../layouts/menuMobile.php' ?>
 
     <header>

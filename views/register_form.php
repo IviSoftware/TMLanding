@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Midas</title>
     <link rel="stylesheet" href="../assets/css/trainingMidasGlobalStyles.css?v6.0">
-    <link rel="stylesheet" href="../assets/css/registerStyles.css?v3.0">
+    <link rel="stylesheet" href="../assets/css/registerStyles.css?v4.0">
     <script src="https://kit.fontawesome.com/7663d03649.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,8 +25,11 @@
         }
     
     </style>
+    <link rel="stylesheet" href="../assets/css/menuDesktopStyles.css?v1.0">
 </head>
 <body>
+
+    <?php require '../layouts/navBar.php'  ?>
 
     <?php require '../layouts/menuMobile.php' ?>
 
